@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【2025年最新】ブログを始めるならコレ！おすすめレンタルサーバー比較</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Montserrat:wght@700;800&display=swap');
+
+        :root {
+            --primary-grad: linear-gradient(135deg, #5E72E4 0%, #825EE4 100%);
+            --secondary-color: #8898aa;
+            --background-color: #f8f9fe;
+            --text-color: #32325d;
+            --light-gray: #e9ecef;
+            --white: #ffffff;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('background.png');
+            background-position: center;
+            background-size: cover;
+            filter: blur(8px);
+            opacity: 0.05;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--primary-grad);
+            padding: 60px 0;
+            color: var(--white);
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .header-text h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 3rem;
+            margin: 0 0 15px;
+            letter-spacing: -1px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-text p.subtitle {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .header-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--white);
+            box-shadow: var(--shadow-lg);
+            flex-shrink: 0;
+            background-color: var(--white);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 14px 38px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease-in-out;
+            font-size: 1.05rem;
+            border: none;
+            cursor: pointer;
+            background-size: 200% auto;
+        }
+
+        .btn-primary {
+            background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+            color: var(--text-color);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-primary:hover {
+            background-position: right center;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #5E72E4;
+            border: 2px solid #5E72E4;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #5E72E4;
+            color: var(--white);
+            border-color: #5E72E4;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+
+        .section {
+            padding: 70px 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.85);
+            margin: 20px 0;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .section:first-child {
+            margin-top: 0;
+        }
+        .section:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 2.3rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: var(--text-color);
+        }
+        
+        .section > p {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+        }
+
+        .server-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .server-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            border: 1px solid var(--light-gray);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .server-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .server-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .server-card p {
+            margin-bottom: 25px;
+            min-height: 70px;
+            color: var(--secondary-color);
+            flex-grow: 1;
+        }
+
+        .server-card .btn-secondary {
+            margin-top: auto;
+        }
+
+        /* Social Links */
+        .social-links {
+            text-align: center;
+            padding: 20px 0 0;
+        }
+
+        .social-links .btn {
+            margin: 0 12px;
+            font-size: 1.6rem;
+            width: 64px;
+            height: 64px;
+            line-height: 64px;
+            padding: 0;
+            border-radius: 50%;
+            color: var(--white);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .social-links .btn:hover {
+             transform: translateY(-3px) scale(1.1);
+             box-shadow: var(--shadow-lg);
+        }
+
+        .section#social {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        #social::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('background.png');
+            background-position: center;
+            background-size: cover;
+            opacity: 0.3;
+            filter: blur(3px);
+            z-index: -1;
+        }
+        
+        .btn-twitter {
+            background: #1DA1F2;
+        }
+        
+        .btn-note {
+            background: #41C9B4;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-color);
+            color: #aab7c4;
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        footer a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: #a6c1ee;
+        }
+
+        @media (max-width: 768px) {
+            .header-text h1 {
+                font-size: 2.5rem;
+            }
+            header p.subtitle {
+                font-size: 1.1rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            .section {
+                margin: 10px 0;
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="icon.png" alt="運営者アイコン" class="header-icon">
+                <div class="header-text">
+                    <h1>最高のブログ体験は、最高のサーバーから</h1>
+                    <p class="subtitle">表示速度、安定性、使いやすさ。あなたのブログの可能性を最大限に引き出すレンタルサーバーを見つけよう。</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="section" id="problem">
+                <h2>こんなお悩み、ありませんか？</h2>
+                <p>「ブログを始めたけど、ページの表示が遅い…」<br>
+                   「サーバーの操作が難しくて、設定で挫折しそう…」<br>
+                   「セキュリティは大丈夫？大事な記事が消えたらどうしよう…」<br>
+                   そんな不安を解消し、創作活動に集中できる環境がここにあります。</p>
+            </section>
+
+            <section class="section" id="ranking" style="background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); color: var(--white); text-shadow: 0 1px 2px rgba(0,0,0,0.1);">
+                <h2 style="color: var(--white);"><i class="fas fa-crown" style="margin-right: 15px; color: #ffdd57;"></i>レンタルサーバー総合ランキング</h2>
+                <p style="font-size: 1.2rem; opacity: 0.9;">「結局どれが一番いいの？」そんなあなたへ。性能、料金、人気度を徹底比較！<br><strong>WordPressブログに最適なサーバー</strong>をランキング形式で紹介します。</p>
+                <a href="https://memoriesto-go.com/archives/rentalservers.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="background-image: none; background-color: var(--white); color: #fda085; border: 2px solid var(--white);">ランキング記事を読む</a>
+            </section>
+
+            <section class="section" id="server-articles">
+                <h2>目的別！レンタルサーバー紹介記事</h2>
+                <p>あなたのブログに最適なサーバーが必ず見つかります。</p>
+                <div class="server-grid">
+                    <div class="server-card">
+                        <h3>エックスサーバーで簡単WordPress開設</h3>
+                        <p>エックスサーバーの「クイックスタート」機能でWordPressブログを始める手順を解説。費用から初期設定まで、初心者にも分かりやすく紹介します。</p>
+                        <a href="https://memoriesto-go.com/archives/wp-quickstart.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">解説記事を読む</a>
+                    </div>
+                    <div class="server-card">
+                        <h3>格安！カラフルボックスの評判</h3>
+                        <p>格安サーバー「カラフルボックス」のレビュー。手頃な料金プラン、30日間の無料お試し、高速性能、強力なセキュリティが特徴です。</p>
+                        <a href="https://memoriesto-go.com/archives/colorfulbox.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">解説記事を読む</a>
+                    </div>
+                    <div class="server-card">
+                        <h3>ConoHa WINGでブログを始める手順</h3>
+                        <p>ConoHa WINGの「WordPressかんたんセットアップ」を使ったブログ開設ガイド。登録からインストールまで7ステップで完了。高速で使いやすいと評判です。</p>
+                        <a href="https://memoriesto-go.com/archives/conohawing.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">解説記事を読む</a>
+                    </div>
+                    <div class="server-card">
+                        <h3>mixhostでWordPressブログを開設</h3>
+                        <p>mixhostの「WordPressクイックスタート」でブログを始める手順を解説。10分で完了する8ステップで、初心者でも安心です。</p>
+                        <a href="https://memoriesto-go.com/archives/mixhost.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">解説記事を読む</a>
+                    </div>
+                    <div class="server-card">
+                        <h3>さくらのレンタルサーバでブログ開設</h3>
+                        <p>さくらのレンタルサーバを使ったWordPressブログの始め方を解説。申込みからインストールまでの7ステップを紹介します。</p>
+                        <a href="https://memoriesto-go.com/archives/sakura-internet.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">解説記事を読む</a>
+                    </div>
+                    <div class="server-card">
+                        <h3>エックスサーバーの料金と始め方</h3>
+                        <p>WordPress初心者向けにエックスサーバーの料金プランと始め方を解説。おすすめプランや「クイックスタート」機能を紹介します。</p>
+                        <a href="https://memoriesto-go.com/archives/xserver-price.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">解説記事を読む</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="roadmap">
+                <h2>ブログ成功へのロードマップ</h2>
+                <p>サーバーを決めたら、次はいよいよ記事作成！<br>収益化までの具体的なステップを完全解説します。</p>
+                <a href="https://memoriesto-go.com/archives/blog-roadmaps.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ロードマップ記事を読む</a>
+            </section>
+
+            <section class="section" id="social">
+                <h2>about「ウタカタブログ」</h2>
+                <p>副業(ブログ運営)やポイ活/お金拾いをテーマにしたブログ『ウタカタブログ』も運営中！ぜひ一度、遊びに来てください。</p>
+                <a href="https://memoriesto-go.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" style="margin-bottom: 40px;">ブログトップへ</a>
+                
+                <p>SNSでは最新情報を発信しています。</p>
+                <div class="social-links" style="padding-top: 20px;">
+                    <!-- Xとnoteのリンクをここに設定してください -->
+                    <a href="https://x.com/utakatablog2" class="btn btn-twitter" aria-label="Xのプロフィールへ" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://note.com/pecosan0810" class="btn btn-note" aria-label="noteのプロフィールへ" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-book"></i></a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <!-- ブログサイトへのリンクを設定してください -->
+            <p>&copy; 2025 <a href="https://memoriesto-go.com/" style="color: white; text-decoration: none;">ウタカタブログ</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
